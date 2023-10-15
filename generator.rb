@@ -1,8 +1,8 @@
 require 'date'
 require 'json'
 
-start = Date.now
-days = 365.times.map { |n| start - n }.reverse
+start = Date.parse('2023-08-06')
+days = (start..Date.today).to_a
 
 days.map do |day|
   date1 = day.to_time
